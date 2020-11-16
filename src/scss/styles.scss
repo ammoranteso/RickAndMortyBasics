@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./base/_custom-material.scss";
+@import "./fonts/fonts.scss";
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+  background: #262c3a;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

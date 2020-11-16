@@ -1,0 +1,41 @@
+<div class="container-characters indigo-dark-theme">
+
+  <div class="characters-title">
+    <h1 class="title">Characters</h1>
+  </div>
+
+  <div class="container-card">
+    <ng-container *ngIf="charactersObs$ | async as str">
+      <div
+        *ngFor="let items of str.results"
+        class="contain__card-characters">
+        <div class="img__card-characters">
+          <img
+            class="img-custom"
+            src="{{items.image}}">
+        </div>
+        <div class="description__card-characters">
+          <div class="text-container">
+            <h1 class="title">{{ items.name }}  </h1>
+
+            <span class="status">
+              <h4 class="title">{{ items.status }}</h4>
+              <h4 class="title">{{ items.species }}</h4>
+            </span>
+
+          </div>
+          <div class="text-container">
+            Last know location:
+            <h3 class="title">{{ items.location.name }}</h3>
+          </div>
+          <!-- <div class="text-container">
+            Type:
+            <h3 class="title">{{ items.type }}</h3>
+          </div> -->
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+
+</div>
